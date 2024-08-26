@@ -70,7 +70,7 @@ export default function RegisterForm() {
     if (buyShoes) total += 600;
     if (buyCap) total += 400;
 
-    if ((buyBottle && buyShoes && buyCap)) total = total * 0.8;
+    if (buyBottle && buyShoes && buyCap) total = total * 0.8;
 
     return total;
   };
@@ -135,7 +135,7 @@ export default function RegisterForm() {
       <div>
         <label className="form-label">Plan</label>
         <select
-          className={"form-control" + (planError ? " is-invalid" : "")}
+          className={"form-select" + (planError ? " is-invalid" : "")}
           onChange={selectPlanOnChange}
           value={plan}
         >
